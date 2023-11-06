@@ -11,7 +11,7 @@ inrl({
 	if (match.match(/login/gi)) {
 		match = match.replace(/login/gi, '');
 		if (!match) return await message.send('_give me a number to send otp_');
-		const msg = await truecaller.login(match);
+		const msg = await truecaller.set(match);
 		if (msg) return await message.send(`_successfully send otp to this ${match} number_\n_use *true otp* <key> to login_`);
 		return await message.send(`_use *true logout* as first_`)
 	} else if (match.match(/logout/gi)) {
