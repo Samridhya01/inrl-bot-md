@@ -7,6 +7,7 @@ inrl({
 	pattern: 'true ?(.*)',
 	desc: 'search number on truecaller',
 	type: "search"
+	fromMe: true
 }, async (message, match) => {
 	if (match.match(/login/gi)) {
 		match = match.replace(/login/gi, '');
