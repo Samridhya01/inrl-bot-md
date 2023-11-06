@@ -25,7 +25,7 @@ inrl({
 		if (msg) return await message.send(`_successfully Logined to Truecaller!!_`);
 		return await message.send(`_use *true logout* as first_`)
 	}
-	let user = (match || message.reply_message.text || '').replace(/[^0-9]/g, '');
+	let user = (message.client.mention.jid?.[0] || message.reply_message.mention.jid?.[0] || message.reply_message.text || match).replace(/[^0-9]/g, '');
 	if (!user) return await message.send(`_reply to a user_`)
 	const res = await truecaller.search(user);
 	if (!res.status) return await message.send(res.message);
