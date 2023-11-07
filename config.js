@@ -5,15 +5,15 @@ if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
 process.env.NODE_OPTIONS = '--max_old_space_size=2560'//2.5
 const DB_URL =  process.env.DATABASE_URL || '';
 module.exports = {
-    SESSION_ID: process.env.SESSION_ID || '', //your ssid to run bot
+    SESSION_ID: process.env.SESSION_ID || 'inrl~fef95qJUQ7b289ac00be912b5237e171b578', //your ssid to run bot
     HEROKU: {
         API_KEY: process.env.HEROKU_API_KEY,
         APP_NAME: process.env.HEROKU_APP_NAME
     },
     BASE_URL : "https://inrl-web.onrender.com/",
-    REJECT_CALL : toBool(process.env.REJECT_CALL || 'false'),
+    REJECT_CALL : toBool(process.env.REJECT_CALL || 'true'),
     BADWORD_BLOCK : toBool(process.env.BADWORD_BLOCK || 'false'),
-    ALLWAYS_ONLINE: toBool(process.env.ALLWAYS_ONLINE || "false"),
+    ALLWAYS_ONLINE: toBool(process.env.ALLWAYS_ONLINE || "true"),
     REACT : toBool(process.env.REACT || "false"),
     ANTI_SPAM : toBool(process.env.ANTI_SPAM || "false"),
     SPAM_BLOCK : toBool(process.env.SPAM_BLOCK || "false"),
@@ -27,8 +27,8 @@ module.exports = {
     READ_COMMANDS : toBool(process.env.READ_COMMANDS || "false"),
     WARN_GROUP_SPAMMERS : toBool(process.env.WARN_GROUP_SPAMMERS || "false"),
     BAD_WORD_WARN : toBool(process.env.BAD_WORD_WARN || "false"),
-    READ_CHAT : toBool(process.env.READ_CHAT ||  "false"),
-    CHATBOT_PM : toBool(process.env.CHATBOT_PM || "false"),
+    READ_CHAT : toBool(process.env.READ_CHAT ||  "true"),
+    CHATBOT_PM : toBool(process.env.CHATBOT_PM || "true"),
     CHATBOT_GRP : toBool(process.env.CHATBOT_GRP || "false"),
     ERROR_MSG : toBool(process.env.ERROR_MSG || "false"),
     WARNCOUND : process.env.WARNCOUND || 5,
